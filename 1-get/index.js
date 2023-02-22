@@ -1,3 +1,4 @@
+// ________GET________
 const express = require("express"); //Importando o módulos express vindo do framework Express.js
 const app = express(); // Criando uma instância dele
 
@@ -11,14 +12,6 @@ app.use(
 app.use(express.json()); //Middleware, transformando JSON and um obj JS
 
 //rotas - endpoints
-app.post("/createproduct", (req, res) => {
-  const name = req.body.name;
-  const price = req.body.price;
-  console.log(name);
-  console.log(price);
-
-  res.json({message: `O produto '${name}' foi criado com sucesso`})
-});
 app.get("/", (req, res) => {
   res.json({ message: "Primeira rota criada com sucesso" });
 }); //Inicializando uma rota 'get' para o express
